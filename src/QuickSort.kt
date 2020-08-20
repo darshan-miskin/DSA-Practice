@@ -21,7 +21,7 @@ fun main(){
 
 fun quickSort(array:Array<Int>, left:Int, right:Int){
     if(left<right){
-        var partition=partition(array,left,right)
+        val partition=partition(array,left,right)
         quickSort(array,left,partition-1)
         quickSort(array,partition+1,right)
     }
@@ -32,7 +32,7 @@ fun partition(array:Array<Int>, left:Int, right:Int):Int{
     var i=left
     val pivot=array[right]
 
-    for(j in left..array.lastIndex){
+    for(j in i..array.lastIndex){
         if(array[j]<pivot){
             swap(array,i,j)
             i++
