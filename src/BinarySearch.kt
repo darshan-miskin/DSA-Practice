@@ -6,7 +6,7 @@ fun main() {
 
     var num:Int= readLine()!!.toInt()
 
-    var left=0; var right=array.size-1; var mid=0;
+    var left=0; var right=array.lastIndex; var mid=0;
 
     var isFound=false
 
