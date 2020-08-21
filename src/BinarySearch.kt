@@ -6,6 +6,10 @@ fun main() {
 
     var num:Int= readLine()!!.toInt()
 
+    binarySearch(array,num)
+}
+fun binarySearch(array:Array<Int>, num:Int){
+
     var left=0; var right=array.lastIndex; var mid=0;
 
     var isFound=false
