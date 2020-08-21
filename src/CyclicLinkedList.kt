@@ -15,7 +15,7 @@ fun main(){
     node3.nextNode=node4
     node4.nextNode=node5
     node5.nextNode=node6
-    node6.nextNode=node6
+    node6.nextNode=node1
 
     val culpritNode= findFaultyNode(node1)
 
