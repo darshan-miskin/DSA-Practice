@@ -5,7 +5,7 @@ fun main(){
 }
 
 /**
- * prints out the two minimum values in an array along with its sum.
+ * prints out the two minimum values in an unsorted array along with its sum.
  * Time complexity -> O(n)
  */
 fun minSum(array:Array<Int>){
