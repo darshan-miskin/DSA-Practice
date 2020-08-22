@@ -29,5 +29,5 @@ fun binarySearch(array:Array<Int>, num:Int){
         }
     }
     if(!isFound)
-        println("Count not find $num")
+        println("Could not find $num")
 }
