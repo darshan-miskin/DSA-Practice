@@ -1,6 +1,10 @@
 import java.util.*
 import kotlin.collections.ArrayList
 
+/**
+ * Solution to HackerRank problem at https://www.hackerrank.com/challenges/swap-nodes-algo/problem
+ */
+
 class Node(val data: Int){
     var left:Node?=null
     var right:Node?=null
