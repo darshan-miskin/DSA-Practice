@@ -79,7 +79,7 @@ fun inOrder(root: Node?):String{
 fun swapNodes(indexes: Array<Array<Int>>, queries: Array<Int>): Array<ArrayList<Int>> {
     val root=getTreeRoot(indexes)
     var myRoot=root
-    val treeOrder=getTreeOrder(root)
+//    val treeOrder=getTreeOrder(root)
     val output=Array(queries.size){ ArrayList<Int>() }
 
     for (i in queries.indices){
