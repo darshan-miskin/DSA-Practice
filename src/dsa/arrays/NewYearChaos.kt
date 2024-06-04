@@ -1,3 +1,5 @@
+package dsa.arrays
+
 import java.util.*
 import kotlin.collections.*
 import kotlin.io.*
@@ -14,7 +16,7 @@ fun minimumBribes(array: Array<Int>) {
     var swaps=0;
 
     for (i in array.size downTo 1){
-        val offBy=find(array,i)
+        val offBy= find(array,i)
         if(abs(offBy)>=3){
             swaps=0
             println("Too chaotic")

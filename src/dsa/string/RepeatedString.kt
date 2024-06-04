@@ -1,24 +1,11 @@
-import java.io.*
-import java.math.*
-import java.security.*
-import java.text.*
+package dsa.string
+
 import java.util.*
-import java.util.concurrent.*
-import java.util.function.*
-import java.util.regex.*
-import java.util.stream.*
-import kotlin.collections.*
-import kotlin.comparisons.*
 import kotlin.io.*
-import kotlin.jvm.*
-import kotlin.jvm.functions.*
-import kotlin.jvm.internal.*
-import kotlin.ranges.*
-import kotlin.sequences.*
 import kotlin.text.*
 
 /**
- * Solution ot hackerrank problem: https://www.hackerrank.com/challenges/repeated-string/problem
+ * Solution ot hackerrank problem: https://www.hackerrank.com/challenges/repeated-dsa.string/problem
  * Time Complexity O(n)
  */
 fun repeatedString(s: String, n: Long): Long {

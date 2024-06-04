@@ -1,7 +1,9 @@
+package dsa.arrays
+
 fun main(){
     val array= arrayOf(11,2,2,4,5,5,7,8,9,4,11)
 
-    val duplicates=showDuplicates(array)
+    val duplicates= showDuplicates(array)
     
     for (i in duplicates.indices){
         println(duplicates.get(i))

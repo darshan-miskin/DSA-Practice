@@ -1,8 +1,10 @@
+package dsa.search
+
 fun main() {
     val array= arrayOf(1,10,15,16,50,55,62,71,72,76,79,82,84)
 //                     0  1  2  3  4  5  6  7  8  9 10 11 12
 
-    println("Enter a number to search")
+    println("Enter a number to dsa.search")
 
     var num:Int= readLine()!!.toInt()
 

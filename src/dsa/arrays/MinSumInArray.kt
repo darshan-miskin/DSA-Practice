@@ -1,3 +1,5 @@
+package dsa.arrays
+
 fun main(){
     val array= arrayOf(5,20,5,1,25,74,10,30,3,8,7)
 

@@ -1,3 +1,5 @@
+package dsa.sort
+
 import java.util.*
 
 fun main(){
@@ -13,7 +15,7 @@ fun main(){
     var endTime=Calendar.getInstance().timeInMillis
     var timeTaken:Double=(endTime.toDouble()-startTime.toDouble())/1000
 
-    println("It took $timeTaken seconds to sort")
+    println("It took $timeTaken seconds to dsa.sort")
 
     for (value in array)
         print("$value ")
@@ -21,7 +23,7 @@ fun main(){
 
 fun quickSort(array:Array<Int>, left:Int, right:Int){
     if(left<right){
-        val partition=partition(array,left,right)
+        val partition= partition(array,left,right)
         quickSort(array,left,partition-1)
         quickSort(array,partition+1,right)
     }
@@ -32,7 +34,7 @@ fun partition(array:Array<Int>, left:Int, right:Int):Int{
     var i=left
     val pivot=array[right]
 
-    for(j in i..array.lastIndex){
+    for(j in i..right){
         if(array[j]<pivot){
             swap(array,i,j)
             i++

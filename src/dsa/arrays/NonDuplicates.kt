@@ -1,7 +1,9 @@
+package dsa.arrays
+
 fun main(){
     val array= arrayOf(1,2,4,4,5,6,8,10,10,11,11)
 
-    val nonDuplicates=getNonDuplicates(array)
+    val nonDuplicates= getNonDuplicates(array)
 
     for(i in nonDuplicates.indices){
         println(nonDuplicates.get(i))

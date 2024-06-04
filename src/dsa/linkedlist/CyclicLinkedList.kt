@@ -1,14 +1,16 @@
+package dsa.linkedlist
+
 class NodeL(val nodeName:String){
-    var nextNode:NodeL?=null
+    var nextNode: NodeL?=null
 }
 
 fun main(){
-    val node1=NodeL("1")
-    val node2=NodeL("2")
-    val node3=NodeL("3")
-    val node4=NodeL("4")
-    val node5=NodeL("5")
-    val node6=NodeL("6")
+    val node1= NodeL("1")
+    val node2= NodeL("2")
+    val node3= NodeL("3")
+    val node4= NodeL("4")
+    val node5= NodeL("5")
+    val node6= NodeL("6")
 
     node1.nextNode=node2
     node2.nextNode=node3
@@ -28,7 +30,7 @@ fun main(){
 /**
  * Returns the culprit node if cyclic or null if not
  */
-fun findFaultyNode(rootNode:NodeL?):NodeL?{
+fun findFaultyNode(rootNode: NodeL?): NodeL?{
     var isFound=false
     var thisNode=rootNode
     var nextNode=rootNode?.nextNode

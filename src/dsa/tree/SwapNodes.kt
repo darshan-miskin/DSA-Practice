@@ -1,3 +1,5 @@
+package dsa.tree
+
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -6,12 +8,12 @@ import kotlin.collections.ArrayList
  */
 
 class Node(val data: Int){
-    var left:Node?=null
-    var right:Node?=null
+    var left: Node?=null
+    var right: Node?=null
 }
 
-fun getTreeRoot(indexes: Array<Array<Int>>):Node?{
-    val root:Node?=Node(1)
+fun getTreeRoot(indexes: Array<Array<Int>>): Node?{
+    val root: Node?= Node(1)
     val list=ArrayList<Node?>()
 
     list.add(root)
@@ -57,8 +59,8 @@ fun getTreeOrder(root: Node?):Int{
     var left=0
     var right=0
     if(root!=null){
-        left=1+getTreeOrder(root.left)
-        right=1+getTreeOrder(root.right)
+        left=1+ getTreeOrder(root.left)
+        right=1+ getTreeOrder(root.right)
 
     }
     return maxOf(left, right)
@@ -69,15 +71,15 @@ fun inOrder(root: Node?):String{
     var left=""
     var right=""
     if(root!=null){
-        left=inOrder(root.left).trim()
+        left= inOrder(root.left).trim()
         value=root.data.toString().trim()
-        right=inOrder(root.right).trim()
+        right= inOrder(root.right).trim()
     }
     return "$left $value $right ".trim()
 }
 
 fun swapNodes(indexes: Array<Array<Int>>, queries: Array<Int>): Array<ArrayList<Int>> {
-    val root=getTreeRoot(indexes)
+    val root= getTreeRoot(indexes)
     var myRoot=root
 //    val treeOrder=getTreeOrder(root)
     val output=Array(queries.size){ ArrayList<Int>() }
@@ -87,7 +89,7 @@ fun swapNodes(indexes: Array<Array<Int>>, queries: Array<Int>): Array<ArrayList<
 
         swap(myRoot,k,1)
 
-        val array=inOrder(root).split(" ").map { it.trim().toInt() }.toTypedArray()
+        val array= inOrder(root).split(" ").map { it.trim().toInt() }.toTypedArray()
         output[i]= array.toList() as ArrayList<Int>
     }
 

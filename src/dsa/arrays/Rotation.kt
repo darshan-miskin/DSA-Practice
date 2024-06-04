@@ -1,3 +1,5 @@
+package dsa.arrays
+
 import java.util.*
 
 fun main(){
@@ -13,16 +15,15 @@ fun main(){
     println("Enter rotation count")
     val rotateBy=scn.nextInt()
 
-    val finalArray=rotate(array, rotateBy)
+    val finalArray= rotate(array, rotateBy)
 
     println("After left rotation by $rotateBy")
-    for (i in finalArray.indices)
-        print("${array[i]} ")
+    print(array)
 
 }
 
 fun rotate(array: Array<Int>, rotateBy:Int):Array<Int>{
-    for (i in 0 until rotateBy) {
+    for (j in 0 until rotateBy) {
         val temp=array[0]
         for (i in 1 until array.size)
             array[i - 1] = array[i]
