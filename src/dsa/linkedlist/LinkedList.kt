@@ -2,9 +2,7 @@ package dsa.linkedlist
 
 class LinkedList(value: Int) {
     var head: Node?
-        private set
     var tail: Node?
-        private set
 
     inner class Node(var value: Int) {
         var next: Node? = null
