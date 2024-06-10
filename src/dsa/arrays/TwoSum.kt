@@ -28,10 +28,3 @@ fun main() {
     solution = twoSum(arrayOf(3,2,4).toIntArray(), 6)
     println(solution.toList().toString())
 }
-
-fun toSeconds(time: String): (Int) -> Int = when (time) {
-    "hour" -> { value1 -> value1 * 60 * 60 }
-    "minute" -> { value -> value * 60 }
-    "second" -> { value -> value }
-    else -> { value -> value }
-}
