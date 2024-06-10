@@ -11,8 +11,9 @@ fun main(){
     )
 
     val visited = HashSet<Pair<Int,Int>>()
+    val path = Stack<Pair<Int, Int>>()
 
-    println("traverseMaze: ${traverseMaze(visited, maze,0,0)}")
+    println("traverseMaze: ${traverseMaze(path, visited, maze,0,0)}")
 
     path.forEach { print("${it.first} ${it.second} -> ") }
     println()
@@ -25,7 +26,6 @@ fun main(){
 //    visited.forEach { print("${it.first} ${it.second} -> ") }
 }
 
-val path = Stack<Pair<Int, Int>>()
 var count = 0
 
 /**
@@ -33,6 +33,7 @@ var count = 0
  * can move up, down, left & right
  */
 fun traverseMaze(
+    path: Stack<Pair<Int, Int>>,
     visited: HashSet<Pair<Int, Int>>,
     maze: MutableList<MutableList<Int>>,
     i: Int, j: Int
@@ -61,10 +62,10 @@ fun traverseMaze(
             return true
         }
 
-        down = traverseMaze(visited, maze, i+1, j)
-        right = traverseMaze(visited, maze, i, j+1)
-        up = traverseMaze(visited, maze, i-1, j)
-        left = traverseMaze(visited, maze, i, j-1)
+        down = traverseMaze(path, visited, maze, i+1, j)
+        right = traverseMaze(path, visited, maze, i, j+1)
+        up = traverseMaze(path, visited, maze, i-1, j)
+        left = traverseMaze(path, visited, maze, i, j-1)
 
         // revert path value. indicating dead end
         if(!down && !right && !up && !left) {
