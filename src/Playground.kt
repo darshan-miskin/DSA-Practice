@@ -1,5 +1,11 @@
 import java.util.Stack
 
+/**
+ * Rat is placed at 0,0 index & has to reach N,N index for an N*N array.
+ * The solution should return true if maze has a solution along with the path and
+ * update the maze path to a value eg: 4, to denote traversal. If it is not traversable,
+ * return false.
+ */
 fun main(){
     val maze = mutableListOf(
         mutableListOf(1, 0, 1, 1, 1, 1),
