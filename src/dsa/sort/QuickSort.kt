@@ -30,19 +30,17 @@ fun quickSort(array:Array<Int>, left:Int, right:Int){
 }
 
 fun partition(array:Array<Int>, left:Int, right:Int):Int{
-    var pi=0
-    var i=left
+    var j=left
     val pivot=array[right]
 
-    for(j in i..right){
-        if(array[j]<pivot){
+    for(i in left..right){
+        if(array[i]<pivot){
             swap(array,i,j)
-            i++
+            j++
         }
     }
-    pi=i
-    swap(array,pi,right)
-    return pi
+    swap(array,j,right)
+    return j
 }
 
 fun swap(array: Array<Int>, leftIndex:Int, rightIndex:Int){
