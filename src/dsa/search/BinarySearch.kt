@@ -1,35 +1,30 @@
 package dsa.search
 
 fun main() {
-    val array= arrayOf(1,10,15,16,50,55,62,71,72,76,79,82,84)
-//                     0  1  2  3  4  5  6  7  8  9 10 11 12
+    val array = arrayOf(1, 10, 15, 16, 50, 55, 62, 71, 72, 76, 79, 82, 84)
+//   indexes ->         0   1   2   3   4   5   6   7   8   9  10  11  12
 
-    println("Enter a number to dsa.search")
+    println(array.toList())
+    println("Enter a number to search in above array")
 
-    var num:Int= readLine()!!.toInt()
+    val num= readln().toInt()
 
-    binarySearch(array,num)
+    if(!binarySearch(array,num)) println("Could not find $num")
 }
-fun binarySearch(array:Array<Int>, num:Int){
 
-    var left=0; var right=array.lastIndex; var mid=0;
+fun binarySearch(array:Array<Int>, search:Int): Boolean {
+    var start = 0
+    var end = array.lastIndex
 
-    var isFound=false
+    while (start<=end){
+        val mid= (start+end)/2
 
-    while(right>=left){
-        mid=(left+right)/2
-        if(array[mid]==num){
-            isFound=true
-            print("$num found at index $mid")
-            break
+        if(array[mid]==search) {
+            println("element found at index $mid")
+            return true
         }
-        else if(array[mid]<num){
-            left=mid+1;
-        }
-        else if (array[mid]>num){
-            right=mid-1
-        }
+        if(array[mid]>search) end = mid-1
+        else start = mid+1
     }
-    if(!isFound)
-        println("Could not find $num")
+    return false
 }
