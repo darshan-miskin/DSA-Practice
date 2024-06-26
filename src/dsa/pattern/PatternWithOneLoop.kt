@@ -1,7 +1,7 @@
-package pattern
+package dsa.pattern
 
 /**
- * Print the following pattern using only one loop.
+ * Print the following dsa.pattern using only one loop.
  *
  *              *
  *  //space
