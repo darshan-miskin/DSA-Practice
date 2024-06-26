@@ -1,6 +1,7 @@
+package coroutine
+
 import kotlinx.coroutines.*
-import utils.printCoroutineScopeInfo
-import utils.printJobsHierarchy
+import coroutine.utils.printJobsHierarchy
 
 fun main() {
 //    println("start of main block")
