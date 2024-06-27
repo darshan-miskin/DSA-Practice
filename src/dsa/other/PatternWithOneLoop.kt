@@ -1,4 +1,4 @@
-package dsa.pattern
+package dsa.other
 
 /**
  * Print the following dsa.pattern using only one loop.
