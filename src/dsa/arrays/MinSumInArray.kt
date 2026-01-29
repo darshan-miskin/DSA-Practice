@@ -15,8 +15,7 @@ fun minSum(array:Array<Int>){
         var indexA=0
         var indexB=0
         var minA = array[indexA]
-        var minB=array[indexB]
-        val min: Int
+        var minB = array[indexB]
 
         for (i in array.indices){
            if (array[i]<minA){
@@ -28,8 +27,8 @@ fun minSum(array:Array<Int>){
                 indexB=i
             }
         }
-        min=minA+minB
-        println("minimum sum in array is $min with elements ${array[indexA]} and ${array[indexB]} at index $indexA & $indexB")
+        val minsUM=minA+minB
+        println("minimum sum in array is $minsUM with elements ${array[indexA]} and ${array[indexB]} at index $indexA & $indexB")
     }
     else{
         println("Cannot find sum with just one element")

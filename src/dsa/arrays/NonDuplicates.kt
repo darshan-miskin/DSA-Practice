@@ -20,11 +20,8 @@ fun getNonDuplicates(array: Array<Int>):ArrayList<Int>{
     val set=HashSet<Int>()
 
     for(i in array.indices){
-        if(set.contains(array[i])){
+        if(!set.add(array[i])){
             duplicates.add(array[i])
-        }
-        else{
-            set.add(array[i])
         }
     }
 
