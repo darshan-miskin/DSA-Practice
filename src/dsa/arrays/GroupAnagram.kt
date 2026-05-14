@@ -2,7 +2,7 @@ package dsa.arrays
 
 //leetcode 49
 fun main(){
-    println(groupAnagrams(arrayListOf("rat","tar","bar","art","arb","raf")))
+    println(groupAnagrams(arrayListOf("rat","tar","bar","art","arb","raf", "rat")))
 }
 
 fun groupAnagrams(strArray: ArrayList<String>): ArrayList<ArrayList<String>>{
@@ -17,9 +17,8 @@ fun groupAnagrams(strArray: ArrayList<String>): ArrayList<ArrayList<String>>{
             keyArray[char - 'a']++
         }
         val key = keyArray.contentToString()
-        if(!map.contains(key))
-            map[key] = ArrayList()
 
+        map.putIfAbsent(key, ArrayList())
         map[key]?.add(str)
     }
 
