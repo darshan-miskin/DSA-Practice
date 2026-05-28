@@ -51,7 +51,7 @@ fun main(){
 
     var isDecrement = false
 
-    for (i in 0 until matrixSize){
+    repeat(matrixSize){
         val current = matrix[colCounter][rowCounter]
         print("$current ")
         visited.add("${colCounter}x$rowCounter")
