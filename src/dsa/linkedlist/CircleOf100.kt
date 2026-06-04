@@ -12,7 +12,7 @@ fun main(){
     var temp: Node? = head
     println(" ${temp?.index}")
     while (temp?.next!=temp){
-        temp?.next = temp?.next?.next
+        temp?.next = temp.next?.next
         print(" ${temp?.next?.index}")
         temp = temp?.next
     }
@@ -22,8 +22,8 @@ fun main(){
 }
 
 fun init(noOfPeople: Int): Node {
-    var head: Node? = Node()
-    var tail = head
+    val head: Node = Node()
+    var tail: Node? = head
     for (i in 2..noOfPeople){
         val next = Node()
         next.index = i
@@ -31,7 +31,7 @@ fun init(noOfPeople: Int): Node {
         tail = tail?.next
     }
     tail?.next = head
-    return head!!
+    return head
 }
 
 fun printll(head: Node?){
